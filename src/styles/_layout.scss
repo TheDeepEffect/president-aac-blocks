@@ -70,7 +70,9 @@ a.link-no-style {
 	.social-media {
 		display: inline-flex;
 		li {
-			margin: 0.25rem;
+			a {
+				margin: 0.25rem;
+			}
 		}
 	}
 

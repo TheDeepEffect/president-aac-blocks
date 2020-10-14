@@ -12,6 +12,7 @@ import { Container, Row, Col } from "react-bootstrap"
 
 import Header from "./header"
 import Navbar from "./navBar"
+import Footer from "./footer"
 // import Footer from "./footer"
 
 const Layout = ({ children, pageInfo }) => (
@@ -45,6 +46,8 @@ const Layout = ({ children, pageInfo }) => (
 						<Col className="footer-col">{/* <Footer /> */}</Col>
 					</Row>
 				</Container>
+
+				<Footer />
 			</>
 		)}
 	/>

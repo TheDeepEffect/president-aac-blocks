@@ -3,9 +3,9 @@ import { Row, Col, Container } from "react-bootstrap"
 
 import Layout from "../components/layout"
 import ProductCarousel from "../components/ProductCaorusel"
-// import ProductCard from "../components/ProductCard"
+import ProductCard from "../components/ProductCard"
 import SEO from "../components/seo"
-// import video from "../video/dummy.mp4"
+import Video from "../components/video"
 import image from "./../images/productImage.jpg"
 
 const IndexPage = () => (
@@ -42,9 +42,7 @@ const IndexPage = () => (
 			</Col>
 		</Row>
 		<Row noGutters className="video-player">
-			<video height="100%" width="80%" loop muted autoPlay>
-				{/* <source src={video} type="video/mp4" /> */}
-			</video>
+			<Video url="https://www.youtube-nocookie.com/embed/wfKA3OY7IWs?controls=0" />
 		</Row>
 		<Row noGutters className="video-background">
 			<Col>
@@ -53,11 +51,39 @@ const IndexPage = () => (
 		</Row>
 
 		<Container className="mt-1 product-cards">
-			<Row>
-				<Col>{/* <ProductCard /> */}</Col>
-				<Col>{/* <ProductCard /> */}</Col>
-				<Col>{/* <ProductCard /> */}</Col>
-				<Col>{/* <ProductCard /> */}</Col>
+			<Row noGutters>
+				<Col>
+					<ProductCard
+						image={image}
+						title="Product"
+						description="Description of a product"
+						link="/page-2"
+					/>
+				</Col>
+				<Col>
+					<ProductCard
+						image={image}
+						title="Product"
+						description="Description of a product"
+						link="/page-2"
+					/>
+				</Col>
+				<Col>
+					<ProductCard
+						image={image}
+						title="Product"
+						description="Description of a product"
+						link="/page-2"
+					/>
+				</Col>
+				<Col>
+					<ProductCard
+						image={image}
+						title="Product"
+						description="Description of a product"
+						link="/page-2"
+					/>
+				</Col>
 			</Row>
 		</Container>
 	</Layout>
