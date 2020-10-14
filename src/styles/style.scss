@@ -1,0 +1,28 @@
+@import "variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+@import "layout";
+@import "navbar";
+
+.product-card {
+	margin: 5px;
+	box-shadow: 0 2px 4px #20232a;
+	border: $color-primary;
+	z-index: 2;
+}
+
+.video-background {
+	position: relative;
+	z-index: -1;
+	bottom: -2.5rem;
+	height: 35vh;
+	background-color: $primary;
+	text-align: center;
+	.col {
+		top: 35%;
+	}
+}
+.video-player {
+	justify-content: center;
+	margin-bottom: -50px;
+}
