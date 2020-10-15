@@ -43,6 +43,9 @@ a.link-no-style {
 		flex: 1 50%;
 		margin-right: 1.25em;
 	}
+	.r-footer li {
+		margin-bottom: 25px;
+	}
 	.h-box {
 		column-count: 2;
 		column-gap: 1.25em;
@@ -51,6 +54,7 @@ a.link-no-style {
 		text-align: center;
 		color: #999;
 		padding-top: 50px;
+		margin-bottom: -3rem;
 	}
 	.l-footer p {
 		padding-right: 20%;
@@ -82,6 +86,7 @@ a.link-no-style {
 		}
 		.features {
 			flex-grow: 2;
+			margin-bottom: 10px;
 		}
 		.l-footer {
 			flex: 1 0px;

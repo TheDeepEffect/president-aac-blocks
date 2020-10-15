@@ -4,9 +4,13 @@ import { Row, Col, Container } from "react-bootstrap"
 import Layout from "../components/layout"
 import ProductCarousel from "../components/ProductCaorusel"
 import ProductCard from "../components/ProductCard"
+import ProductCardCarousel from "../components/ProductCardCarousel"
 import SEO from "../components/seo"
 import Video from "../components/video"
 import image from "./../images/productImage.jpg"
+
+//COntact us and follow us ke beech me gap...
+//Products ko carousel krna hai
 
 const IndexPage = () => (
 	<Layout pageInfo={{ pageName: "index" }}>
@@ -50,42 +54,34 @@ const IndexPage = () => (
 			</Col>
 		</Row>
 
-		<Container className="mt-1 product-cards">
-			<Row noGutters>
-				<Col>
-					<ProductCard
-						image={image}
-						title="Product"
-						description="Description of a product"
-						link="/page-2"
-					/>
-				</Col>
-				<Col>
-					<ProductCard
-						image={image}
-						title="Product"
-						description="Description of a product"
-						link="/page-2"
-					/>
-				</Col>
-				<Col>
-					<ProductCard
-						image={image}
-						title="Product"
-						description="Description of a product"
-						link="/page-2"
-					/>
-				</Col>
-				<Col>
-					<ProductCard
-						image={image}
-						title="Product"
-						description="Description of a product"
-						link="/page-2"
-					/>
-				</Col>
-			</Row>
-		</Container>
+		<Row noGutters>
+			<Col>
+				<ProductCardCarousel
+					data={[
+						{
+							image,
+							title: "Product 1",
+							description: "Product 1 description!",
+						},
+						{
+							image,
+							title: "Product 2",
+							description: "Product 2 description!",
+						},
+						{
+							image,
+							title: "Product 3",
+							description: "Product 3 description!",
+						},
+						{
+							image,
+							title: "Product 4",
+							description: "Product 4 description!",
+						},
+					]}
+				/>
+			</Col>
+		</Row>
 	</Layout>
 )
 
