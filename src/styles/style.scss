@@ -18,17 +18,17 @@
 .video-background {
 	position: relative;
 	z-index: -1;
-	bottom: -2.5rem;
 	height: 25vh;
 	background-color: $primary;
 	text-align: center;
+	margin-bottom: -1rem;
 	.col {
-		top: 35%;
+		top: 30%;
 	}
 }
 .video-player {
 	justify-content: center;
-	margin-bottom: -50px;
+	margin-bottom: -2rem;
 }
 .video {
 	overflow: hidden;
