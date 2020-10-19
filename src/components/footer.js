@@ -2,13 +2,15 @@ import { Link } from "gatsby"
 import React from "react"
 import { Button } from "react-bootstrap"
 import { SocialIcon } from "react-social-icons"
-
-const Footer = ({ logo }) => {
+import logo from "./../images/Logo.png"
+const Footer = () => {
 	return (
 		<div class="footer-col">
 			<footer className="footer">
 				<div className="l-footer">
-					<h1>{/* <img src={logo} alt="logo" /> */}Logo</h1>
+					<h1>
+						<img src={logo} alt="logo" height="100vh" />
+					</h1>
 					<p>Address</p>
 				</div>
 				<ul className="r-footer">

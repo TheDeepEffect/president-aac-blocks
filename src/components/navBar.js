@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { Navbar, Nav } from "react-bootstrap"
 
 const CustomNavbar = ({ pageInfo }) => {
-	console.log(pageInfo)
+	console.log(pageInfo, "gg")
 	return (
 		<>
 			<Navbar
