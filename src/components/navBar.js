@@ -1,42 +1,49 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
-
-import { Navbar, Nav } from "react-bootstrap"
+import Toolbar from "./Toolbar/Toolbar"
+import SideDrawer from "./SideDrawer/SideDrawer"
+import Backdrop from "./Backdrop/Backdrop"
 
 const CustomNavbar = ({ pageInfo }) => {
 	console.log(pageInfo, "gg")
+	const [state, setState] = useState({
+		sideDrawerOpen: false,
+	})
+
+	const { sideDrawerOpen } = state
+	console.log(sideDrawerOpen)
 	return (
-		<>
-			<Navbar
-				variant="dark"
-				bg="dark"
-				expand="lg"
-				id="site-navbar"
-				defaultActiveKey="/"
+		<header
+			style={{
+				background: `#fff`,
+			}}
+		>
+			<div
+				style={{
+					padding: `1.45rem 1.0875rem`,
+				}}
 			>
-				<Navbar.Toggle aria-controls="basic-navbar-nav" />
-				<Navbar.Collapse id="basic-navbar-nav">
-					<Nav className="ml-auto" activeKey="/" variant="pills">
-						<Link to="/" className="link-no-style">
-							<Nav.Link as="span" eventKey="/" className="link-no-style">
-								HOME
-							</Nav.Link>
-						</Link>
-						<Link to="/page-2" className="link-no-style">
-							<Nav.Link as="span" eventKey="/page-2" className="link-no-style">
-								ABOUT US
-							</Nav.Link>
-						</Link>
-						<Link to="/about" className="link-no-style">
-							<Nav.Link as="span" eventKey="Contact" className="link-no-style">
-								CONTACT US
-							</Nav.Link>
-						</Link>
-					</Nav>
-				</Navbar.Collapse>
-				{/* </Container> */}
-			</Navbar>
-		</>
+				<Toolbar
+					drawerClickHandler={() => {
+						setState({
+							...state,
+							sideDrawerOpen: !sideDrawerOpen,
+						})
+					}}
+				/>
+				<SideDrawer show={sideDrawerOpen} />
+				{sideDrawerOpen && (
+					<Backdrop
+						click={() =>
+							setState({
+								...state,
+								sideDrawerOpen: false,
+							})
+						}
+					/>
+				)}
+			</div>
+		</header>
 	)
 }
 

@@ -8,10 +8,16 @@ const Footer = () => {
 		<div class="footer-col">
 			<footer className="footer">
 				<div className="l-footer">
-					<h1>
-						<img src={logo} alt="logo" height="100vh" />
-					</h1>
-					<p>Address</p>
+					<h1>Visit us:</h1>
+					<p>
+						President AAC Blocks,
+						<br />
+						Survey No. 1522, Eral Road,
+						<br />
+						Near Gangadiya Cross Road,Adadra
+						<br />
+						Kalol Gujarat,India - 389341
+					</p>
 				</div>
 				<ul className="r-footer">
 					<li></li>
